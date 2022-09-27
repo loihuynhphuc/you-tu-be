@@ -1,0 +1,55 @@
+<section class="content-video">
+  <div class="tab">
+    <ul class="nav">
+      <li class="nav-item">
+         <a href="/" class="nav-link active"aria-current="page" req-value="Tat-ca">Tất cả</a>
+      </li>
+       <li class="nav-item">
+        <button class="nav-link btn-category-item" aria-current="page" req-value="The-thao">Thể thao</button>
+      </li>
+       <li class="nav-item">
+        <button class="nav-link btn-category-item" aria-current="page" req-value="Am-nhac" >Âm nhạc</button>
+      </li>
+       <li class="nav-item">
+        <button class="nav-link btn-category-item" aria-current="page" req-value="Am-nhac" >Hoạt hình</button>
+      </li> 
+      <li class="nav-item">
+        <button class="nav-link btn-category-item" aria-current="page" req-value="Am-nhac" >Trò chơi</button>
+      </li>
+       <li class="nav-item">
+        <button class="nav-link btn-category-item" aria-current="page" req-value="Am-nhac" >Nấu ăn</button>
+      </li>
+       <li class="nav-item">
+        <button class="nav-link btn-category-item" aria-current="page" req-value="Am-nhac" >Trò chơi Hành động phiêu lưu</button>
+      </li>
+</ul>
+  </div>
+  <div class="row" id="section-video-yt">
+    {{#each dataVideo}}
+  <div class="col l-3 m-6 c-12">
+    <div class="card-channel ">
+      <a href="/watch/{{this.slug}}" class="link-video">  
+          <img src="{{this.imgVideo}}" class="card-img-top" alt="...">
+      </a>
+  <div class="card-body">
+    <a href="#" class="link-channel-img"><img class="img-avatar-channel" src="{{this.idChannel.avatar}}" alt=""></a>
+    <div class="card-channel-description">
+      <a href="/watch/{{this.slug}}" class="link-video" style="text-decoration: none">  
+    <h6 class="card-title">{{this.titleVideo}}</h6>
+    </a>
+  <div class="info-channel">
+      <span class="name-channel">{{this.idChannel.nameChannel}}</span>
+      <div class="info-channle__views">
+    <span class="views-channel">{{this.idChannel.views}}N lượt xem</span>
+     {{!-- <span class="views-channel">{{this.idChannel.createdAt}}</span> --}}
+      </div>
+  </div>
+    </div>
+    {{!-- <p class="card-text">{{this.description}}</p> --}}
+  </div>
+</div>
+  </div>
+    {{/each}}
+</div>
+
+</section>
