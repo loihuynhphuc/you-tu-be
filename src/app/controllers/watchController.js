@@ -6,8 +6,10 @@ class WatchController {
     // [get] /watch/:slug
     watchVideo(req,res,next){
         videoModel.findOne({slug: req.params.slug})
+        .populate('idChannel')
         .then(videoSource=>{
-             res.render('videos/showVideo',{videoSource: mongooseToObject(videoSource)})
+            res.json(videoSource);
+            //  res.render('videos/showVideo',{videoSource: mongooseToObject(videoSource)})
         })  
         .catch(next)
     }

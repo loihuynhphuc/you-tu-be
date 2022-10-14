@@ -33,9 +33,9 @@
         </li>
       </ul> --}}
       <div class="search-box">
-       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit" aria-label="Tìm kiếm bằng giọng nói">Search</button>
+       <form class="d-flex" role="search" method="GET" action="/search">
+        <input class="form-control me-2" type="search" placeholder="Search" name="v" aria-label="Search" >
+        <button class="btn btn-outline-success btn-search-form" type="submit" aria-label="Tìm kiếm bằng giọng nói">Search</button>
       </form>
       <button class="button-micro" aria-label="Tìm kiếm bằng giọng nói">
         <i class="fa-solid fa-microphone"></i>
